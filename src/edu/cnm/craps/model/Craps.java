@@ -1,4 +1,4 @@
-package edu.cnm.deepdive;
+package edu.cnm.craps.model;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,7 +12,8 @@ public class Craps {
 
 
   public List<int[]> getRolls() {
-    return rolls; // Todo - Return a clone
+    List<int[]> copy = new LinkedList<>(rolls);
+    return copy;
   }
 
   protected void reset() {
@@ -52,7 +53,7 @@ public class Craps {
             case 3:
             case 12:
               return LOSS;
-            case 6:
+            case 7:
             case 11:
               return WIN;
             default:
